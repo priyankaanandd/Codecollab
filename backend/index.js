@@ -10,7 +10,7 @@ import express from 'express'
 import http from 'http'
 
 
-import { server } from "socket.io"
+import { Server } from "socket.io"
 
 //express() is a function call 
 //return an express application that represent web app
@@ -33,8 +33,15 @@ const io= new Server(server,{
 //ise knih bhi use kr stke h
 
 
-io.on("connection", (Socket)=>{
-    console.log("user connrectd",socket.id);
+
+
+
+//****** USER JOIN FUNCTIONALITY */
+
+
+
+io.on("connection", (socket)=>{
+    console.log("user connected",socket.id);
 });
 
 
